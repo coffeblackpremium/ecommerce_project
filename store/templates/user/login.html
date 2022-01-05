@@ -1,28 +1,18 @@
-{%extends 'partials/base.html' %}
+{% extends 'partials/base.html' %}
 {% load crispy_forms_tags %}
-{% load static %}
-
 {% block content %}
-
 <form action="#" method="POST" autocomplete="off">
-    {% csrf_token %}
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            {{form.username.errors}}
-            {{form.username|as_crispy_field}}
-
             {{form.email|as_crispy_field}}
-
-            {{form.password|as_crispy_field}}
-
-            {{form.confirm_password.errors}}
-            {{form.confirm_password|as_crispy_field}}
+            {{form.senha|as_crispy_field}}
             
         </div>
+        <a href="{%url 'user_register' %}">Ainda não é cadastrado ? Cadastre-se aqui</a>
     </div>
     <div class="row justify-content-md-center">
         <div class="col-md-2">
-            <button type="submit" class="btn btn-success btn-block btn-lg"> Confirmar </button>
+            <button type="submit" class="btn btn-success btn-block btn-lg"> Entrar </button>
         </div>
         <div class="col-md-2">
             <a href="{%url 'store' %}" class="btn btn-secondary btn-block btn-lg">
@@ -30,5 +20,4 @@
             </a>
         </div>
     </div>
-
 {% endblock %}
