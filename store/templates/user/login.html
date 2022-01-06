@@ -2,10 +2,10 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <form action="#" method="POST" autocomplete="off">
+    {% csrf_token %}
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            {{form.email|as_crispy_field}}
-            {{form.senha|as_crispy_field}}
+            {{login_form|crispy}}
             
         </div>
         <a href="{%url 'user_register' %}">Ainda não é cadastrado ? Cadastre-se aqui</a>

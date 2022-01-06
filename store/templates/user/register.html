@@ -11,12 +11,13 @@
             {{form.username.errors}}
             {{form.username|as_crispy_field}}
 
+            {{form.email.errors}}
             {{form.email|as_crispy_field}}
 
-            {{form.password|as_crispy_field}}
+            {{form.password1|as_crispy_field}}
 
-            {{form.confirm_password.errors}}
-            {{form.confirm_password|as_crispy_field}}
+            {{form.password2.errors}}
+            {{form.password2|as_crispy_field}}
             
         </div>
     </div>

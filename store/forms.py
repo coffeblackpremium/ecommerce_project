@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models import User
 from django.forms import fields
 from django.forms.widgets import PasswordInput
 from .models import UserRegisterModel
@@ -7,23 +8,18 @@ from django.contrib.auth.forms import UserCreationForm
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
     class Meta:
-        model = UserRegisterModel
+        model = User
         fields = (
             'username', 
             'email',
-            'password',
-            'confirm_password',
+            'password1',
+            'password2',
             )
-
-        widgets = {
-            'password':forms.PasswordInput(),
-            'confirm_password':forms.PasswordInput()
-        }
 
         labels = {
             'username':'Usuario',
-            'password':'Senha',
-            'confirm_password':'Confirme a Senha'
+            'password1':'Senha',
+            'password2':'Confirme a Senha'
         }
 
         def save(self, commit=True):
