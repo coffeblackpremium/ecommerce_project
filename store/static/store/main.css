@@ -1,16 +1,50 @@
-body{
-	background-color: hsl(0, 0%, 98%);
-}
-
-h1,h2,h3,h4,h5,h6{
-	color:hsl(0, 0%, 30%);
-}
 
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
 	border-radius: 4px;
 	padding: 10px;
+}
+
+.products-container {
+	max-width: 650px;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.product-header {
+	width: 100%;
+	max-width: 650px;
+	display: flex;
+	justify-content: flex-start;
+	border-bottom: 4px solid lightgrey;
+	margin: 0 auto;
+}
+
+.product-title {
+	width: 45%;
+}
+
+.price {
+	width: 15%;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.quantity {
+	width: 20%;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
+}
+
+.total {
+	width: 10%;
+	border-bottom: 1px solid lightgrey;
+	display: flex;
+	align-items: center;
 }
 
 .thumbnail{
@@ -73,14 +107,6 @@ h1,h2,h3,h4,h5,h6{
 
 }
 
-.quantity{
-	display: inline-block;
-	font-weight: 700;
-	padding-right:10px;
-	
-
-}
-
 .chg-quantity{
 	width: 12px;
 	cursor: pointer;
@@ -96,4 +122,34 @@ h1,h2,h3,h4,h5,h6{
 
 .hidden{
 	display: none!important;
+}
+
+.img-product-cart {
+	width: 25%;
+	padding: 0;
+	margin: 0;
+}
+
+.fa-times-circle {
+	font-size: 25px;
+	color: blue;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.fa-angle-left {
+	font-size: 25px;
+	color: blue;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.fa-angle-right {
+	font-size: 25px;
+	color: blue;
+	margin-left: 10px;
+	margin-right: 10px;
+	cursor: pointer;
 }
